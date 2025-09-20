@@ -1,0 +1,39 @@
+Windows Registry Editor Version 5.00
+
+; Advanced version with ExecutionPolicy Bypass - Multiple search options in context menu
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN]
+@="Search file extension"
+"MUIVerb"="Search file extension"
+"Icon"="url.dll,0"
+
+; File-Extensions.org
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\01FileExt]
+@="on File-Extensions.org"
+"Icon"="url.dll,0"
+
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\01FileExt\command]
+@="cmd.exe /c \"for %%i in (\"%1\") do start \"\" \"https://www.file-extensions.org/search?search=%%~xi\" 2>nul | findstr /v \".\""
+
+; FileInfo.com
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\02FileInfo]
+@="on FileInfo.com"
+"Icon"="url.dll,0"
+
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\02FileInfo\command]
+@="cmd.exe /c \"for %%i in (\"%1\") do start \"\" \"https://fileinfo.com/extension/%%~xi\" 2>nul | findstr /v \".\""
+
+; Google Search
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\03Google]
+@="with Google"
+"Icon"="url.dll,0"
+
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\03Google\command]
+@="cmd.exe /c \"for %%i in (\"%1\") do start \"\" \"https://www.google.com/search?q=%%~xi+file+extension+format\" 2>nul | findstr /v \".\""
+
+; Open all simultaneously
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\04All]
+@="on all sites simultaneously"
+"Icon"="url.dll,0"
+
+[HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN\shell\04All\command]
+@="cmd.exe /c \"for %%i in (\"%1\") do (start \"\" \"https://www.file-extensions.org/search?search=%%~xi\" & start \"\" \"https://fileinfo.com/extension/%%~xi\" & start \"\" \"https://www.google.com/search?q=%%~xi+file+extension+format\") 2>nul | findstr /v \".\""

@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; Deinstallation - Entfernt alle SearchExt Kontextmenü-Einträge
+[-HKEY_CLASSES_ROOT\*\shell\SearchExtOnline]
+[-HKEY_CLASSES_ROOT\*\shell\SearchExtMultiple]

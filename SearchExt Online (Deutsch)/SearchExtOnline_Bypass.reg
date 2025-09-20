@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Kontextmenü-Eintrag für alle Dateitypen (*) - Version mit ExecutionPolicy Bypass
+[HKEY_CLASSES_ROOT\*\shell\SearchExtOnline]
+@="Dateierweiterung suchen"
+"MUIVerb"="Dateierweiterung suchen"
+"Position"="Bottom"
+"Icon"="url.dll,0"
+
+; Aufrufbefehl – CMD-basiert für maximale Kompatibilität
+[HKEY_CLASSES_ROOT\*\shell\SearchExtOnline\command]
+@="cmd.exe /c \"for %%i in (\"%1\") do set ext=%%~xi && call set ext=%%ext:~1%% && start \"\" \"https://www.file-extensions.org/search?search=%%ext%%\" 2>nul | findstr /v \".\""

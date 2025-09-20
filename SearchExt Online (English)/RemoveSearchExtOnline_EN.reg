@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; Uninstallation - Removes all English SearchExt context menu entries
+[-HKEY_CLASSES_ROOT\*\shell\SearchExtOnlineEN]
+[-HKEY_CLASSES_ROOT\*\shell\SearchExtMultipleEN]
