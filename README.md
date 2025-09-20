@@ -1,5 +1,5 @@
 # SearchExt Online - Installation Guide  
-(German version down below .. [ticzz/SearchExtension_Online](https://github.com/ticzz/SearchExtension/blob/main/README.md#searchext-online---installationsanleitung))
+(German version down below .. [ticzz/SearchExtension_Online](https://github.com/ticzz/SearchExtension?tab=readme-ov-file#searchext-online---installationsanleitung)
 
 ## What is this?
 A simple solution to replace the discontinued "SearchExt" program. Adds a context menu entry that allows you to look up file extensions online.
@@ -195,5 +195,6 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ## Sicherheitshinweis:
 
 Diese Registry-Einträge führen PowerShell-Befehle aus. Der Code ist harmlos und führt nur Browser-Aufrufe durch, aber seien Sie bei Registry-Änderungen grundsätzlich vorsichtig.
+
 
 
